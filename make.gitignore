@@ -1,0 +1,46 @@
+#!/bin/sh
+
+echo "# The Backroom's .gitignore File\
+# from https://github.com/toptal/gitignore\
+";
+echo "# ASPNETCore.gitignore" > .gitignore;
+cat ./templates/ASPNETCore.gitignore >> .gitignore;
+
+echo "# Archive.gitignore" >> .gitignore;
+cat ./templates/Archive.gitignore >> .gitignore;
+
+echo "# Git.gitignore" >> .gitignore;
+cat ./templates/Git.gitignore >> .gitignore;
+
+echo "# VisualStudio.gitignore" >> .gitignore;
+cat ./templates/VisualStudio.gitignore >> .gitignore;
+
+echo "# VisualStudio.patch" >> .gitignore;
+cat ./templates/VisualStudio.patch >> .gitignore;
+
+echo "# VisualStudioCode.gitignore" >> .gitignore;
+cat ./templates/VisualStudioCode.gitignore >> .gitignore;
+
+echo "# Text.gitignore" >> .gitignore;
+cat ./templates/Text.patch >> .gitignore;
+
+echo "# certificates.gitignore" >> .gitignore;
+cat ./templates/Text.patch >> .gitignore;
+
+echo "# macOS.gitignore" >> .gitignore;
+cat ./templates/macOS.gitignore >> .gitignore;
+
+echo "# Windows.gitignore" >> .gitignore;
+cat ./templates/Windows.gitignore >> .gitignore;
+
+echo "# backroom.gitignore" >> .gitignore;
+cat ./backroom.gitignore >> .gitignore;
+
+for DIR in ./*; do
+    if [ -d "$DIR" ] && [[ "$DIR" != "./gitignore" ]] && [[ "$DIR" != "./Directory.Build" ]] && [[ "$DIR" != "./Backroom.Properties" ]]; then
+        echo "Processing directory $DIR";
+        cat ".gitignore" >> "$DIR/.gitignore";
+    fi
+done
+
+cat ".gitignore" >> "../.gitignore";
