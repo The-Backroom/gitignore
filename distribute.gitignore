@@ -1,0 +1,8 @@
+#!bin/sh
+
+source "./include.gitignore";
+
+for includefile in $includedfiles; do
+    echo "including $includefile";
+    cat "./templates/$includefile" >> "./.gitignore";
+done
