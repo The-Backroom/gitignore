@@ -5,5 +5,6 @@ source "./include.gitignore";
 git sparse-checkout set;
 
 for includedfile in ${includedfiles[@]}; do
+   echo "git sparse-checkout add ""/templates/$includedfile""";
    git sparse-checkout add "/templates/$includedfile";
 done;
