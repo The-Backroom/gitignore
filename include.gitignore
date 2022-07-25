@@ -1,0 +1,16 @@
+#!bin/sh
+
+includedfiles=(
+    "ASPNETCore.gitignore"
+    "Archive.gitignore"
+    "Git.gitignore"
+    "VisualStudio.gitignore"
+    "VisualStudio.patch"
+    "VisualStudioCode.gitignore"
+    "Text.gitignore"
+    "certificates.gitignore"
+    "macOS.gitignore"
+    "macOS.patch"
+    "Windows.gitignore"
+    "backroom.gitignore"
+);

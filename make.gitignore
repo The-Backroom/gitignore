@@ -1,0 +1,16 @@
+#!/bin/sh
+
+source "./include.gitignore";
+
+echo "" > "./.gitignore";
+echo "#####################################################" >> "./.gitignore";
+echo "#                                                   #" >> "./.gitignore";
+echo "#          The Backroom's GitIgnore File            #" >> "./.gitignore";
+echo "# Compiled from https://github.com/toptal/gitignore #" >> "./.gitignore";
+echo "#                                                   #" >> "./.gitignore";
+echo "#####################################################" >> "./.gitignore";
+echo "" >> "./.gitignore"; 
+
+for includedfile in ${includedfiles[@]}; do
+    "./addto.gitignore"  "./$includedfile";
+done;

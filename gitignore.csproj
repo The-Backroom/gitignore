@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.Build.NoTargets" InitialTargets="SetupGitIgnore">
+    <PropertyGroup>
+       <AssemblyName>backroom.gitignore</AssemblyName>
+       <AssemblyTitle>The Backroom's GitIgnore File</AssemblyTitle>
+       <Title>$(AssemblyTitle)</Title>
+      <TargetFramework>netstandard1.0</TargetFramework>
+    </PropertyGroup>
+    
+    <Target Name="SetupGitIgnore">
+        <Exec Command="./setup.gitignore" />
+    </Target>
+
+    <Target Name="MakeGitIgnore" DependsOnTargets="SetupGitIgnore">
+        <Exec Command="./make.gitignore" />
+    </Target>
+
+    <Target Name="DistributeGitIgnore" DependsOnTargets="MakeGitIgnore">
+        <Exec Command="./distribute.gitignore" />
+    </Target>
+</Project>
