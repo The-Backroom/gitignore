@@ -1,0 +1,9 @@
+#!/bin/sh
+
+echo "" >> .gitignore;
+echo "###############################" >> .gitignore;
+echo "# $1                           " >> .gitignore;
+echo "###############################" >> .gitignore;
+echo "" >> .gitignore;
+
+cat "./templates/$1" >> .gitignore;

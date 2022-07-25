@@ -1,0 +1,6 @@
+*.deps.json
+*.cache
+*.dll
+*.assets.json
+*.pdb
+*.dll
