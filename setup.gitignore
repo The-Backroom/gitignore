@@ -1,6 +1,10 @@
-#!bin/sh
+#!/bin/sh
 
-source "./include.gitignore";
+source ./include.gitignore;
+
+(cd .. && git init gitignore);
+
+git remote set-url --add origin "https://github.com/The-Backroom/gitignore.git";
 
 git sparse-checkout set;
 
