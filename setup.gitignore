@@ -2,13 +2,12 @@
 
 source ./include.gitignore;
 
-(cd .. && git init gitignore);
-
-git remote set-url --add origin "https://github.com/The-Backroom/gitignore.git";
-
-git sparse-checkout set;
+if [[ ! -e templates ]]; then
+   mkdir templates;
+fi;
 
 for includedfile in ${includedfiles[@]}; do
-   echo "git sparse-checkout add ""/templates/$includedfile""";
-   git sparse-checkout add "/templates/$includedfile";
+   #echo "git sparse-checkout add ""/templates/$includedfile""";
+   #git sparse-checkout add "/templates/$includedfile";
+  (cd templates && wget "https://raw.githubusercontent.com/The-Backroom/gitignore/master/templates/$includedfile");
 done;

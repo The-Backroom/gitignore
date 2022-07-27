@@ -1,0 +1,9 @@
+[Nn]u[Gg]et*config
+[Nn]uGg]et.config
+nuget.config
+*.deps.json
+*.cache
+*.dll
+*.assets.json
+*.pdb
+*.dll
